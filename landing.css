@@ -70,7 +70,7 @@ nav {
 }
 
 .features img {
-    max-width: 150%;
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
 }
@@ -108,8 +108,8 @@ nav {
 }
 
  .social-logo {
-   width: 20px;
-   height: 20px; /* Adjust the size as needed */
+   width: 30px;
+   height: 30px; /* Adjust the size as needed */
    margin-right: 10px;
 }
 
