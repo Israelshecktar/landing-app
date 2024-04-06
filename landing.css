@@ -1,27 +1,45 @@
-/* Base styles */
+/* Basic Setup */
+:root {
+    --primary-color: #FF1493;
+    --hover-color: #E0115F;
+    --background-color: pink;
+    --text-color: #333;
+    --accent-color: #00214D;
+}
+
 body, html {
-    background-color: pink;
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
+    color: var(--text-color);
 }
 
-/* Header styles */
+/* Header */
 header {
     text-align: center;
-    padding: 100px 0;
+    padding: 2rem 0;
 }
 
-/* Typography styles */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+/* Typography */
+h1, h2, h3, h4, h5, h6, p, a, nav {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 1.5rem; /* Scale accordingly */
+}
+
+h2 {
+    font-size: 1.25rem;
 }
 
 p, a, nav {
-    font-weight: 400;
+    font-size: 1rem;
 }
 
-/* Navigation styles */
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
@@ -29,143 +47,96 @@ nav {
     align-items: center;
 }
 
-.app-logo {
-    width: 50px;
+.app-logo, .social-logo {
+    width: 3.125rem;
     height: auto;
 }
 
-.app-name {
-    font-weight: 700;
-    margin-left: 10px;
-    color: #333;
-}
-
-/* Get started button styles */
-.get-started-button {
-    background-color: #FF1493;
+/* Interactive Elements */
+.get-started-button, .intro .cta-button {
+    background-color: var(--primary-color);
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.5625rem;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.2s;
 }
 
-.get-started-button:hover {
-    background-color: #E0115F;
-    transform: scale(1.05);
-}
-
-/* Intro section styles */
-.intro .cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #FF1493;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    margin-top: 20px;
-    font-size: 18px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.intro h1, .intro p {
-    transition: color 0.3s ease;
-}
-
-.intro h1 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: 48px;
-    color: #FF1493;
-    margin-bottom: 0;
-}
-
-.intro p {
-    font-family: 'Roboto', serif;
-    font-weight: 400;
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-/* Hover effects */
-.intro h1:hover, .intro p:hover {
-    color: #E0115F;
-}
-
-.intro .cta-button:hover {
-    background-color: #E0115F;
-    transform: scale(1.05);
-}
-
-/* Features section styles */
-.features {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    padding: 50px 0;
-}
-
-.features article {
-    max-width: 300px;
+.get-started-button:hover, .intro .cta-button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .features img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    margin: 0 auto;
 }
 
-/* About section styles */
-.about {
-    background-color: #00214D;
-    padding: 50px;
+/* Features articles layout improvements */
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.features article {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+
+/* Features and About Sections */
+.features, .about {
+    padding: 3.125rem 1rem;
     text-align: center;
+}
+
+.features article {
+    max-width: 18.75rem;
+    margin: 0 auto; /* Centering for mobile */
+}
+
+.about {
+    background-color: var(--accent-color);
     color: white;
 }
-/* Social media logo styles */
-.social-logo {
-    width: 35px;
-    height: 30px;
-    margin-right: 10px;
-}
 
-/* Media queries for responsive design */
-@media (min-width: 576px) {
-    header {
-        padding: 50px 0;
+/* Media Queries for Improved Responsiveness */
+@media (min-width: 480px) {
+    header, .features, .about {
+        padding: 3.125rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; /* Improved spacing */
     }
 }
 
 @media (min-width: 768px) {
     .features {
         flex-direction: row;
+        justify-content: space-evenly;
+        gap: 0;
     }
 
     .features article {
-        margin-bottom: 0;
+        margin: 0 15px; /* Spacing on larger screens */
     }
 
-    nav {
-        padding: 0 30px;
-    }
-}
-
-@media (min-width: 992px) {
-    header {
-        padding: 150px 0;
-    }
-
-    .intro h1 {
-        font-size: 60px;
-    }
-
-    .intro p {
-        font-size: 24px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .features article {
-        max-width: 350px;
+    h1 {
+        font-size: 3rem;
     }
 }
