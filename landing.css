@@ -1,3 +1,12 @@
+/* Basic setup */
+:root {
+    --primary-color: #FF1493;
+    --hover-color: #E0115F;
+    --background-color: pink;
+    --text-color: #333;
+    --accent-color: #00214D;
+}
+
 /* Base styles */
 body, html {
     background-color: pink;
