@@ -70,16 +70,29 @@ nav {
 }
 
 /* Features and About Sections */
+.features img {
+    max-width: 100%; /* Ensure images are not wider than their container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center images within their respective articles */
+}
+.features {
+    display: flex;
+    flex-direction: column; /* Stack articles vertically on smaller screens */
+    align-items: center; /* Center articles for a uniform look */
+    gap: 1.5rem; /* Add some space between stacked articles */
+}
+
 .features, .about {
     padding: 3.125rem 1rem;
     text-align: center;
 }
 
 .features article {
-    max-width: 18.75rem;
-    margin: 0 auto; /* Centering for mobile */
+    width: 100%; /* Full width on smaller screens for better visibility */
+    max-width: 300px; /* Limit article width to maintain aesthetics */
+    padding: 1rem; /* Add some padding around the content */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
-
 .about {
     background-color: var(--accent-color);
     color: white;
@@ -99,13 +112,16 @@ nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px; /* Improved spacing */
+        gap: 20px;
     }
 }
 
 @media (min-width: 768px) {
     .features {
         justify-content: space-around;
+		flex-direction: row;
+        justify-content: space-evenly;
+        gap: 0;
     }
 
     .features article {
