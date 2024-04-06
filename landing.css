@@ -1,45 +1,27 @@
-/* Basic Setup */
-:root {
-    --primary-color: #FF1493;
-    --hover-color: #E0115F;
-    --background-color: pink;
-    --text-color: #333;
-    --accent-color: #00214D;
-}
-
+/* Base styles */
 body, html {
-    background-color: var(--background-color);
+    background-color: pink;
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    color: var(--text-color);
 }
 
-/* Header */
+/* Header styles */
 header {
     text-align: center;
-    padding: 2rem 0;
+    padding: 100px 0;
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6, p, a, nav {
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    font-size: 1.5rem; /* Scale accordingly */
-}
-
-h2 {
-    font-size: 1.25rem;
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
 }
 
 p, a, nav {
-    font-size: 1rem;
+    font-weight: 400;
 }
 
-/* Navigation */
+/* Navigation styles */
 nav {
     display: flex;
     justify-content: space-between;
@@ -47,88 +29,143 @@ nav {
     align-items: center;
 }
 
-.app-logo, .social-logo {
-    width: 3.125rem;
+.app-logo {
+    width: 50px;
     height: auto;
 }
 
-/* Interactive Elements */
-.get-started-button, .intro .cta-button {
-    background-color: var(--primary-color);
+.app-name {
+    font-weight: 700;
+    margin-left: 10px;
+    color: #333;
+}
+
+/* Get started button styles */
+.get-started-button {
+    background-color: #FF1493;
     color: white;
     text-decoration: none;
-    padding: 0.625rem 1.25rem;
-    border-radius: 1.5625rem;
-    font-size: 1rem;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.2s;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.get-started-button:hover, .intro .cta-button:hover {
-    background-color: var(--hover-color);
-    transform: translateY(-0.125rem);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+.get-started-button:hover {
+    background-color: #E0115F;
+    transform: scale(1.05);
 }
 
-/* Features and About Sections */
-.features img {
-    max-width: 100%; /* Ensure images are not wider than their container */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto; /* Center images within their respective articles */
+/* Intro section styles */
+.intro .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FF1493;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
 }
+
+.intro h1, .intro p {
+    transition: color 0.3s ease;
+}
+
+.intro h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    color: #FF1493;
+    margin-bottom: 0;
+}
+
+.intro p {
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Hover effects */
+.intro h1:hover, .intro p:hover {
+    color: #E0115F;
+}
+
+.intro .cta-button:hover {
+    background-color: #E0115F;
+    transform: scale(1.05);
+}
+
+/* Features section styles */
 .features {
     display: flex;
-    flex-direction: column; /* Stack articles vertically on smaller screens */
-    align-items: center; /* Center articles for a uniform look */
-    gap: 1.5rem; /* Add some space between stacked articles */
-}
-
-.features, .about {
-    padding: 3.125rem 1rem;
+    justify-content: space-around;
     text-align: center;
+    padding: 50px 0;
 }
 
 .features article {
-    width: 100%; /* Full width on smaller screens for better visibility */
-    max-width: 300px; /* Limit article width to maintain aesthetics */
-    padding: 1rem; /* Add some padding around the content */
-    box-sizing: border-box; /* Include padding in width calculation */
+    max-width: 300px;
 }
+
+.features img {
+    width: 100%;
+    height: auto;
+}
+
+/* About section styles */
 .about {
-    background-color: var(--accent-color);
+    background-color: #00214D;
+    padding: 50px;
+    text-align: center;
     color: white;
 }
+/* Social media logo styles */
+.social-logo {
+    width: 35px;
+    height: 30px;
+    margin-right: 10px;
+}
 
-/* Media Queries for Improved Responsiveness */
-@media (min-width: 480px) {
-    header, .features, .about {
-        padding: 3.125rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .features {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+/* Media queries for responsive design */
+@media (min-width: 576px) {
+    header {
+        padding: 50px 0;
     }
 }
 
 @media (min-width: 768px) {
     .features {
-        justify-content: space-around;
-		flex-direction: row;
-        justify-content: space-evenly;
-        gap: 0;
+        flex-direction: row;
     }
 
     .features article {
-        margin: 0 15px; /* Spacing on larger screens */
+        margin-bottom: 0;
     }
 
-    h1 {
-        font-size: 3rem;
+    nav {
+        padding: 0 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        padding: 150px 0;
+    }
+
+    .intro h1 {
+        font-size: 60px;
+    }
+
+    .intro p {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .features article {
+        max-width: 350px;
     }
 }
