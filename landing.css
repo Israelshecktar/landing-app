@@ -7,7 +7,7 @@
     --accent-color: #00214D;
 }
 
-Body{
+html, body{
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
@@ -61,9 +61,12 @@ nav {
 
 .cover-image {
   width: 100%;
+  min-height: 100vh;
   height: auto;
   opacity: 1; /* Adding some transparency to the image */
   object-fit: cover;
+  top: 0;
+  left: 0;
 }
 
 .text-overlay {
