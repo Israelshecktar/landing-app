@@ -53,14 +53,17 @@ nav {
 }
 
 .intro {
+	width: 100%;
 	position: relative;
 	text-align: center;
+	overflow: hidden;
 }
 
 .cover-image {
-  width: 150%;
+  width: 100%;
   height: auto;
   opacity: 1; /* Adding some transparency to the image */
+  object-fit: cover;
 }
 
 .text-overlay {
