@@ -52,6 +52,28 @@ nav {
     height: auto;
 }
 
+.intro {
+	position: relative;
+	text-align: center;
+}
+
+.cover-image {
+  width: 100%;
+  height: auto;
+  opacity: 0.8; /* Adding some transparency to the image */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; /* Adjust this color based on your design */
+  font-size: 2rem; /* Example font size, adjust as needed */
+  width: 90%; /* Adjust based on your preference */
+  opacity: 1; /* Ensures text is fully opaque */
+}
+
 /* Interactive Elements */
 .get-started-button, .intro .cta-button {
     background-color: var(--primary-color);
