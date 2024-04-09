@@ -43,7 +43,7 @@ p, a, nav {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 0 15px;
+    padding: 0 0px;
     align-items: center;
 }
 
