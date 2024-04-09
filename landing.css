@@ -60,18 +60,6 @@ nav {
 	overflow: hidden;
 }
 
-.cover-background {
-    background-image: url('https://www.lystloc.com/blog/wp-content/uploads/2022/11/ezgif.com-gif-maker-6.webp');
-    background-size: cover; /* Cover the whole area */
-    background-position: center; /* Center the background image */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Ensure it covers the full height of the viewport */
-}
-
-
 .cover-image {
   width: 100%;
   min-height: 100vh;
