@@ -61,9 +61,9 @@ nav {
 }
 
 .cover-image {
-  width: 100%;
+  width: 110%;
   min-height: 100vh;
-  height: auto;
+  height: 100%;
   opacity: 1.5; /* Adding some transparency to the image */
   object-fit: cover;
   top: 0;
