@@ -11,6 +11,7 @@ html, body{
     background-color: var(--background-color);
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
+        background-size: cover;
 }
 
 /* Header */
@@ -51,25 +52,23 @@ nav {
 }
 
 .intro {
-	width: 100%;
-	position: relative;
-	height: 100vh;
-	text-align: center;
-	overflow: hidden;
+        width: 100%;
+        position: relative;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
 }
 
 .cover-image {
+  background-size: cover;
   width: 100%;
-  min-height: 100vh;
-  height: auto%;
+  height: auto;
   opacity: 1.5; /* Adding some transparency to the image */
-  object-fit: cover;
   top: 0;
   left: -10%;
   margin-left: -10px;
   margin-right: 0;
-  padding-left: -10px;
-  padding-right: 0;
+  padding: 0, 1rem;
 }
 
 .text-overlay {
@@ -79,7 +78,7 @@ nav {
     transform: translateY(-50%);
     color: #fff; /* Adjust this color based on your design */
     font-size: 2rem; /* Example font size, adjust as needed */
-    width: 30%; /* Adjust based on your preference */
+    width: 40%; /* Adjust based on your preference */
     opacity: 1.5; /* Ensures text is fully opaque */
     text-align: left; /* Align text to the right */
 }
@@ -89,7 +88,7 @@ nav {
 }
 
 .text-overlay a.get-started-button {
-  margin-left: 20px; /* Apply spacing between the h1 and the "Get started" button */
+  margin: 40px; /* Apply spacing between the h1 and the "Get started" button */
 }
 
 /* Interactive Elements */
