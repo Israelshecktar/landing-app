@@ -7,7 +7,7 @@
     --accent-color: #00214D;
 }
 
-html {
+Body{
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
