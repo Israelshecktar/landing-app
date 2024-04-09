@@ -58,9 +58,9 @@ nav {
 }
 
 .cover-image {
-  width: 100%;
+  width: 120%;
   height: auto;
-  opacity: 0.8; /* Adding some transparency to the image */
+  opacity: 1; /* Adding some transparency to the image */
 }
 
 .text-overlay {
