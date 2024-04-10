@@ -1,0 +1,187 @@
+/* Basic Setup */
+:root {
+    --primary-color: #FF1493;
+    --hover-color: #E0115F;
+    --background-color: pink;
+    --text-color: #333;
+    --accent-color: #00214D;
+}
+
+html, body{
+    background-color: var(--background-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+        background-size: cover;
+}
+
+/* Header */
+header {
+    text-align: center;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, p, a, nav {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+p, a, nav {
+    font-size: 1rem;
+}
+
+/* Navigation */
+
+.app-logo, .social-logo {
+    width: 3.125rem;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    align-items: center;
+}
+
+.intro {
+        width: 100%;
+        position: relative;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+}
+
+.cover-image {
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  opacity: 1.5; /* Adding some transparency to the image */
+  top: 0;
+  left: -10%;
+  margin-left: -10px;
+  margin-right: 0;
+  padding: 0, 1rem;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 4%;  /* Set to align the text to the right side */
+    transform: translateY(-50%);
+    color: #fff; /* Adjust this color based on your design */
+    font-size: 2rem; /* Example font size, adjust as needed */
+    width: 40%; /* Adjust based on your preference */
+    opacity: 1.5; /* Ensures text is fully opaque */
+    text-align: left; /* Align text to the right */
+}
+
+.text-overlay h1 {
+  color: #FF1493;
+}
+
+.text-overlay a.get-started-button {
+  margin: 40px; /* Apply spacing between the h1 and the "Get started" button */
+}
+
+/* Interactive Elements */
+.get-started-button, .intro .cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.5625rem;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.2s;
+}
+
+.get-started-button:hover, .intro .cta-button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.features img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Features articles layout improvements */
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.features article {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+
+/* Features and About Sections */
+.features, .about {
+    padding: 3.125rem 1rem;
+    text-align: center;
+}
+
+.features article {
+    max-width: 18.75rem;
+    margin: 0 auto;
+}
+
+.about {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+ .social-logo {
+   width: 30px;
+   height: 30px; /* Adjust the size as needed */
+   margin-right: 10px;
+}
+
+/* Media Queries for Improved Responsiveness */
+@media (min-width: 480px) {
+    header, .features, .about {
+        padding: 3.125rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; /* Improved spacing */
+    }
+}
+
+@media (min-width: 768px) {
+    .features {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 0;
+    }
+
+    .features article {
+        margin: 0 15px; /* Spacing on larger screens */
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
