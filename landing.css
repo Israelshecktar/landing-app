@@ -74,11 +74,11 @@ nav {
 .text-overlay {
     position: absolute;
     top: 50%;
-    left: 4%;  /* Set to align the text to the right side */
+    left: 5%;  /* Set to align the text to the right side */
     transform: translateY(-50%);
     color: #fff; /* Adjust this color based on your design */
     font-size: 2rem; /* Example font size, adjust as needed */
-    width: 40%; /* Adjust based on your preference */
+    width: 50%; /* Adjust based on your preference */
     opacity: 1.5; /* Ensures text is fully opaque */
     text-align: left; /* Align text to the right */
 }
@@ -183,5 +183,19 @@ nav {
 
     h1 {
         font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;  /* Center the text horizontally */
+        transform: translate(-50%, -50%); /* Center the text vertically and horizontally */
+        color: #fff; /* Adjust this color based on your design */
+        font-size: 1.5rem; /* Adjust font size for mobile view */
+        width: 90%; /* Increase width to prevent text from slipping out */
+        opacity: 1; /* Set opacity to full */
+        text-align: center; /* Center align text */
     }
 }
